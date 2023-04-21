@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Nevz</string>
+    <string name="logo_name">logo</string>
+    <string name="recommendations_button">Советы</string>
+    <string name="calendar_button">Календарь</string>
+    <string name="tool_button">Измерительный инструмент</string>
+    <string name="salary_button">Отчет по зарплате</string>
+    <string name="production_button">Выработка</string>
+    <string name="main_page">Главное меню</string>
+    <string name="AddDay">Добаваить день</string>
+    <string name="AddTask">добваить сопроводной</string>
+    <string name="registration">Регистрация</string>
+    <string name="user_ID">(ID)Табельны</string>
+    <string name="user_surName">Фамилия</string>
+</resources>
