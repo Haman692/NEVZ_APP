@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.nevz"
-        minSdk 16
+        minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -40,4 +40,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
 }

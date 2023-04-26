@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 import com.example.nevz.model.User;
-import com.example.nevz.model.utils.UtilUserDB;
+import com.example.nevz.utils.UtilUserDB;
 
 
 public class DataBaseHandler extends SQLiteOpenHelper {

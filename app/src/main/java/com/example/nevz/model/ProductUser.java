@@ -1,15 +1,15 @@
 package com.example.nevz.model;
 
-public class Product {
+public class ProductUser {
     private int day;
     private String product;
     private int machine;
     private int count;
 
-    public Product() {
+    public ProductUser() {
     }
 
-    public Product(int day, String product, int machine, int count) {
+    public ProductUser(int day, String product, int machine, int count) {
         this.day = day;
         this.product = product;
         this.machine = machine;

@@ -1,4 +1,4 @@
-package com.example.nevz.model.utils;
+package com.example.nevz.utils;
 
 public class UtilUserDB {
 
