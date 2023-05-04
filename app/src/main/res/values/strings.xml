@@ -19,4 +19,19 @@
     <string name="count_text">Количесвто:</string>
     <string name="type_text">Тип\n изготовления:</string>
     <string name="product_text">Изделие:</string>
+    <string name="create_text">Вывести</string>
+    <string-array name="month">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
 </resources>

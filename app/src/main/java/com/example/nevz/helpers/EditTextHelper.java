@@ -3,8 +3,12 @@ package com.example.nevz.helpers;
 import android.annotation.SuppressLint;
 import android.widget.EditText;
 
+import com.example.nevz.R;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Year;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Locale;
@@ -27,5 +31,16 @@ public class EditTextHelper {
             DateFormat df = new SimpleDateFormat("d.MM.yyyy", Locale.ENGLISH);
             editText.setText(df.format(calendar.getTime()));
         }
+    }
+
+    /**
+     * add yer now
+     *
+     * @param yearText input field
+     */
+    public void year(EditText yearText) {
+        Calendar calendar = new GregorianCalendar();
+        DateFormat df = new SimpleDateFormat("yyyy", Locale.ENGLISH);
+        yearText.setText(df.format(calendar.getTime()));
     }
 }

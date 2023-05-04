@@ -85,4 +85,21 @@ public class ProductsDBHelper extends SQLiteAssetHelper {
         db.close();
         return map;
     }
+
+    public double getCoefficient(String drawing, int machine) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] tables = UtilProductDB.TABLES;
+        for (String table : tables) {
+            Cursor cursor = db.query(table,
+                    new String[]{UtilProductDB.COLUMN_DRAWING, UtilProductDB.COLUMN_COFF, UtilProductDB.COLUMN_PRESS_LATHE},
+                    null, null, null, null, null);
+            while (cursor.moveToNext()) {
+                if (cursor.getString(0).equals(drawing) &&
+                        Integer.parseInt(cursor.getString(2)) == machine) {
+                    return Double.parseDouble(cursor.getString(1));
+                }
+            }
+        }
+        return 0;
+    }
 }

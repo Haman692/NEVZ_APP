@@ -31,13 +31,17 @@ public class UserProdDBHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String CREATE_PRODUCT_USER_TABLE = "CREATE TABLE " + UtilProductUserDB.TABLE_NAME + " ("
-                + UtilProductUserDB.DATE_KEY + " INTEGER, "
-                + UtilProductUserDB.PRODUCT_KEY + " TEXT, "
-                + UtilProductUserDB.MACHINE_KEY + " INTEGER, "
-                + UtilProductUserDB.COUNT_KEY + " INTEGER" + " )";
+        String[] month = {"January", "February", "March ", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"};
+        for (String months: month) {
+            String CREATE_PRODUCT_USER_TABLE = "CREATE TABLE " + months.toUpperCase() + " ("
+                    + UtilProductUserDB.DATE_KEY + " INTEGER, "
+                    + UtilProductUserDB.PRODUCT_KEY + " TEXT, "
+                    + UtilProductUserDB.MACHINE_KEY + " INTEGER, "
+                    + UtilProductUserDB.COUNT_KEY + " INTEGER" + " )";
+            sqLiteDatabase.execSQL(CREATE_PRODUCT_USER_TABLE);
+        }
 
-        sqLiteDatabase.execSQL(CREATE_PRODUCT_USER_TABLE);
     }
 
     /**
@@ -93,5 +97,12 @@ public class UserProdDBHelper extends SQLiteOpenHelper {
                 cursor.getString(1),
                 Integer.parseInt(cursor.getString(2)),
                 Integer.parseInt(cursor.getString(3)));
+    }
+
+    public int getProductPerMonth(String month, int year) {
+        int sum = 0;
+
+
+        return sum;
     }
 }
