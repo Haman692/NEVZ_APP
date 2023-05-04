@@ -10,13 +10,15 @@
     <Button
         android:id="@+id/task_add_button"
         style="@android:style/Widget.DeviceDefault.Button"
-        android:layout_width="205dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
         android:onClick="onClick"
         android:text="@string/AddTask"
         android:textSize="12sp"
         app:backgroundTint="#0C54A0"
+        app:layout_constraintEnd_toEndOf="@+id/main_menu_button"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/production_button2"
         app:layout_constraintTop_toBottomOf="@+id/main_menu_button" />
 
@@ -25,7 +27,9 @@
         style="@android:style/Widget.DeviceDefault.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
         android:fontFamily="@font/montserrat"
         android:onClick="onClick"
         android:text="@string/main_page"
@@ -39,36 +43,40 @@
     <Button
         android:id="@+id/production_button2"
         style="@android:style/Widget.DeviceDefault.Button"
-        android:layout_width="205dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:clickable="false"
         android:fontFamily="@font/montserrat"
         android:text="@string/AddDay"
         android:textSize="12sp"
         app:backgroundTint="#D1D1D1"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/task_add_button"
+        app:layout_constraintStart_toStartOf="@+id/main_menu_button"
         app:layout_constraintTop_toBottomOf="@+id/main_menu_button" />
 
     <EditText
         android:id="@+id/editTextDate"
         style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
-        android:layout_width="263dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="10dp"
         android:ems="10"
         android:fontFamily="@font/montserrat"
         android:inputType="date"
+        android:onClick="onClick"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/task_add_button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textDate"
         app:layout_constraintTop_toBottomOf="@+id/task_add_button" />
 
     <EditText
         android:id="@+id/editTextCount"
         style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
-        android:layout_width="263dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:fontFamily="@font/montserrat"
         android:inputType="date"
@@ -82,7 +90,7 @@
         android:id="@+id/drawingNumber"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:completionHint="Введите номер чертежа"
         android:completionThreshold="0"
         android:fontFamily="@font/montserrat"
@@ -96,11 +104,11 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="184dp"
         android:fontFamily="@font/montserrat"
         android:onClick="onClick"
         android:text="@string/add_db"
         app:backgroundTint="#0C54A0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,27 +116,29 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/drawingNumber"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDate"
         app:layout_constraintStart_toStartOf="@+id/drawingNumber"
         app:layout_constraintTop_toBottomOf="@+id/drawingNumber">
 
         <RadioButton
             android:id="@+id/press"
-            android:layout_width="130dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
-            android:text="@string/press_button" />
+            android:text="@string/press_button"
+            android:textSize="12sp" />
 
         <RadioButton
             android:id="@+id/lathe"
-            android:layout_width="130dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:text="@string/lethe_button"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/drawingNumber"
             app:layout_constraintTop_toBottomOf="@+id/drawingNumber" />
 
@@ -141,10 +151,11 @@
         android:layout_marginTop="25dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/date_text"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/editTextDate"
-        app:layout_constraintEnd_toStartOf="@+id/editTextDate"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/production_button2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/production_button2"
         app:layout_constraintTop_toBottomOf="@+id/production_button2" />
 
     <TextView
@@ -163,26 +174,26 @@
         android:id="@+id/textDate5"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginTop="25dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/count_text"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/editTextCount"
         app:layout_constraintEnd_toStartOf="@+id/editTextCount"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textType" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/production_button2"
+        app:layout_constraintTop_toTopOf="@+id/editTextCount" />
 
     <TextView
         android:id="@+id/textType"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/type_text"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/production_button2"
         app:layout_constraintTop_toTopOf="@+id/radioGroup" />
 
     <TextView
@@ -192,9 +203,10 @@
         android:layout_marginTop="25dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/product_text"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/drawingNumber"
         app:layout_constraintEnd_toStartOf="@+id/drawingNumber"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/production_button2"
         app:layout_constraintTop_toBottomOf="@+id/textDate" />
 </androidx.constraintlayout.widget.ConstraintLayout>

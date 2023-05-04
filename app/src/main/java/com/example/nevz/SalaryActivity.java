@@ -64,12 +64,22 @@ public class SalaryActivity extends AppCompatActivity {
                     String selected = spinner.getSelectedItem().toString();
                     Map<String, String> monthMap = MonthMapHelper.monthMap();
                     cursor = db.rawQuery("SELECT* FROM " + monthMap.get(selected) + ";", null);
-                        while (cursor.moveToNext()) {
-                            sum += cursor.getInt(3)/1000.0*cursor.getInt(2)
-                                    *29.03*productsDBHelper.getCoefficient(cursor.getString(1),cursor.getInt(2));
-                        }
+                    while (cursor.moveToNext()) {
+                        sum += cursor.getInt(3) / 1000.0 * cursor.getInt(2)
+                                * 29.03 * productsDBHelper.getCoefficient(cursor.getString(1), cursor.getInt(2));
+                    }
                     prodText = findViewById(R.id.text_count_prod);
-                    prodText.setText(String.format("%.2f", sum));
+                    String prodPay = String.format("%.2f", sum);
+                    prodText.setText(prodPay);
+                    prodText = findViewById(R.id.text_count_cofficent);
+                    String coffPay = String.format("%.2f", sum * 0.2);
+                    prodText.setText(coffPay);
+                    prodText = findViewById(R.id.count_tax);
+                    String pit = String.format("%.2f", (sum - sum * 0.2) * 0.13);
+                    prodText.setText(pit);
+                    prodText= findViewById(R.id.count_sum);
+                    String sumText = String.format("%.2f", sum + (sum * 0.2)-((sum - sum * 0.2) * 0.13));
+                    prodText.setText(sumText);
                     cursor.close();
                     db.close();
                 } else {

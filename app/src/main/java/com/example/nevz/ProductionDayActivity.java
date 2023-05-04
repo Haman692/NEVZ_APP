@@ -45,7 +45,6 @@ public class ProductionDayActivity extends AppCompatActivity {
         EditText dateText = findViewById(R.id.editTextDate);
         dateText.setText(df.format(calendar.getTime()));
         dateText.setSelectAllOnFocus(true);
-        EditTextHelper.refillingDataText(dateText);
 
         AutoCompleteTextView autoCompleteTextView = findViewById(R.id.drawingNumber);
         myDBHelper = new ProductsDBHelper(this);
@@ -54,6 +53,7 @@ public class ProductionDayActivity extends AppCompatActivity {
         autoCompleteTextView.setAdapter(adapter);
         RadioGroup radioGroup = findViewById(R.id.radioGroup);
         radioGroup.clearCheck();
+        myDBHelper.close();
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
 
             @SuppressLint("NonConstantResourceId")
@@ -73,6 +73,10 @@ public class ProductionDayActivity extends AppCompatActivity {
     @SuppressLint("NonConstantResourceId")
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.editTextDate:
+                EditText dateText = findViewById(R.id.editTextDate);
+                EditTextHelper.refillingDataText(dateText);
+                break;
             case R.id.main_menu_button:
                 startActivity(new Intent(this, MainMenuActivity.class));
                 break;

@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 
 import com.example.nevz.utils.UtilProductDB;
+import com.example.nevz.utils.UtilUserDB;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import java.util.Set;
 
 public class ProductsDBHelper extends SQLiteAssetHelper {
 
-    private final Context context;
+    Context context;
     private SQLiteDatabase myDataBase;
 
     /**
@@ -29,14 +30,14 @@ public class ProductsDBHelper extends SQLiteAssetHelper {
         super(context, UtilProductDB.DATABASE_NAME, null, UtilProductDB.DATABASE_VERSION);
         this.context = context;
         myDataBase = this.getWritableDatabase();
-
+        setForcedUpgrade();
     }
-
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
+
 
     /**
      * get all drawing number in ArrayList

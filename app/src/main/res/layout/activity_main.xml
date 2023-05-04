@@ -26,18 +26,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="150dp"
         android:fontFamily="@font/montserrat"
         android:onClick="onClick"
         android:text="@string/recommendations_button"
         android:textSize="16sp"
         app:backgroundTint="#0C54A0"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_button" />
 
     <Button
         android:id="@+id/calendar_button"
@@ -45,19 +43,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="4dp"
         android:fontFamily="@font/montserrat"
         android:onClick="onClick"
         android:text="@string/calendar_button"
         android:textSize="16sp"
         app:backgroundTint="#0C54A0"
-        app:layout_constraintBottom_toTopOf="@+id/recommendations_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tool_button" />
 
     <Button
         android:id="@+id/tool_button"
@@ -65,19 +61,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="5dp"
         android:fontFamily="@font/montserrat"
         android:onClick="onClick"
         android:text="@string/tool_button"
         android:textSize="16sp"
         app:backgroundTint="#0C54A0"
-        app:layout_constraintBottom_toTopOf="@+id/calendar_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salary_button" />
 
     <Button
         android:id="@+id/production_button"
@@ -85,18 +79,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
         android:fontFamily="@font/montserrat"
         android:onClick="onClick"
         android:text="@string/production_button"
         android:textSize="16sp"
         app:backgroundTint="#0C54A0"
-        app:layout_constraintBottom_toTopOf="@+id/salary_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header1" />
 
     <Button
         android:id="@+id/salary_button"
@@ -104,18 +97,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
         android:fontFamily="@font/montserrat"
         android:onClick="onClick"
         android:text="@string/salary_button"
         android:textSize="16sp"
         app:backgroundTint="#0C54A0"
-        app:layout_constraintBottom_toTopOf="@+id/tool_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/production_button" />
 
     <TextView
         android:id="@+id/header1"

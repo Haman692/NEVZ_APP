@@ -17,9 +17,13 @@
     <string name="add_db">Добавить</string>
     <string name="date_text">Дата:</string>
     <string name="count_text">Количесвто:</string>
-    <string name="type_text">Тип\n изготовления:</string>
+    <string name="type_text">Тип:</string>
     <string name="product_text">Изделие:</string>
     <string name="create_text">Вывести</string>
+    <string name="rai_coff">Районный коэффицент</string>
+    <string name="pay_for_production">Оплата по производственным нарядам</string>
+    <string name="personal_income_tax">НДФЛ</string>
+    <string name="pay_salary">К выплате</string>
     <string-array name="month">
         <item>Январь</item>
         <item>Февраль</item>
